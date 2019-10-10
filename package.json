@@ -1,5 +1,5 @@
 {
-  "name": "e",
+  "name": "m3u8player",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "dplayer": "^1.25.0",
+    "hls.js": "^0.12.4",
     "vue": "^2.6.10"
   },
   "devDependencies": {
