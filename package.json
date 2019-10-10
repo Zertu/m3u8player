@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "dplayer": "^1.25.0",
+    "element-ui": "^2.12.0",
     "hls.js": "^0.12.4",
     "vue": "^2.6.10"
   },

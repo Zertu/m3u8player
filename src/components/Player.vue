@@ -5,20 +5,40 @@
 <script>
 import DPlayer from "dplayer";
 export default {
-  name: "HelloWorld",
+  name: "Player",
   mounted: function() {
-    console.log(this.$refs);
     const dp = new DPlayer({
       container: this.$refs.player,
       screenshot: true,
+      lang: "zh-cn",
+      volume: 1,
+      autoplay: true,
+      loop: true,
       video: {
-        url: "./影 流 之 主.flv",
+        url: this.url,
         pic: "./影 流 之 主.jpg"
       }
     });
+    this.dp = dp;
+  },
+
+  watch: {
+    // 如果 `question` 发生改变，这个函数就会运行
+    url: function(newQuestion, oldQuestion) {
+      console.log(newQuestion);
+      this.dp.switchVideo({
+        url: newQuestion
+      });
+    }
+  },
+  data: function() {
+    return {
+      trueurl: this.url,
+      dp: {}
+    };
   },
   props: {
-    msg: String
+    url: String
   }
 };
 </script>
